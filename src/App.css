@@ -1,0 +1,1720 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
+*,*::before,*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'Montserrat', sans-serif;}
+body{
+  background-color: #3f3f3e;
+  
+}
+.Home-title,.Choose-Path{
+  text-align: center;
+}
+.HomePage{
+  background: url(assets/risen-wang-20jX9b35r_M-unsplash.jpg);
+  background-size: cover;
+  height: 100dvh
+ 
+  
+}
+.HomePage-Overlay{
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.HomePage-Title{
+  width: 40%;
+  text-align: center;
+}
+.HomePage-Title span{
+  color: gold;
+  font-size: 5rem;
+}
+.HomePage-Title-Button{
+  margin-top: 1em;
+  padding: 1em 4em;
+  background-color:black;
+  color: gold;
+  border: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: 2px solid rgb(25, 25, 25)
+}
+.HomePage-Title-Button:hover{
+  transform: scale(1.02);
+  transition: 0.2s ease-in-out;
+  color: rgb(255, 235, 121);
+  border-color: gold;
+}
+.HomePage-Section{
+  position: relative;
+  padding: 10em;
+  text-transform:inherit;
+}
+.HomePage-Section h2{
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  font-size: 3rem;
+}
+.HomePage-Section p{
+  font-size: 1.5rem;
+}
+.TakeMeThereButton1,.TakeMeThereButton2,.TakeMeThereButton3{
+  margin-top: 2em;
+  padding: 1em 3em;
+  background-color: #3d3c3c;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  color: gold;
+  display: inline-block;
+}
+.TakeMeThereButton1:hover,.TakeMeThereButton2:hover,.TakeMeThereButton3:hover{
+  transform: scale(1.04);
+  transition: 0.2s ease-in-out;
+}
+.TakeMeThereButton2{
+  background-color: #212121;
+}
+.TakeMeThereButton3{
+  background-color: rgb(54, 54, 54);
+}
+
+.wave, .wave2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.triangle svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+}
+
+.triangle1 .shape-fill {
+  fill: rgb(29, 29, 29);
+}
+.triangle2 .shape-fill{
+  fill: rgb(55, 55, 55);
+}
+.wave svg,.wave2 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 75px;
+}
+
+.wave .shape-fill {
+  fill: black
+}
+.wave2 .shape-fill{
+  fill: gray;
+}
+.Home-title{
+  margin-top: 1em;
+  color: rgb(214, 213, 213);
+  text-shadow: 2px 2px #000000;
+}
+.Choose-Path{
+  text-shadow: 4px 4px #000000;
+  font-size: 4rem;
+}
+.toggleOffBody{
+  display:none;
+}
+.section-Title{
+  display: flex;
+  flex-direction: column;
+ position: relative;
+
+
+}
+.section-Title h2{
+  font-size: 4rem;
+  text-align: left;
+  width: 100%;
+}
+.section-Title h6{
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 85%;
+  text-decoration: underline;
+}
+/*Home Page Responsive*/
+@media(max-width:1760px){
+  .HomePage-Overlay{
+    font-size: 1.5rem;
+    
+  }
+  .HomePage-Title span{
+    font-size: 3rem;
+  }
+  .HomePage-Title{
+    width:40%;
+  }
+}
+@media(max-width:1000px){
+  .HomePage{
+    width: 100%;
+  }
+  .HomePage-Overlay{
+    font-size: 1.2rem;
+  }
+  .HomePage-Title span{
+    font-size: 3rem;
+  }
+  .HomePage-Title{
+    width: 80%;
+  }
+  .HomePage-Title-Button{
+    font-size: 1rem;
+    margin: 1 auto;
+
+  }
+  .HomePage-Section{
+    padding: 10em 4em;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .HomePage-Section h2{
+    text-align: center;
+    font-size: 3.2rem;
+  }
+
+  .HomePage-Section p{
+    font-size: 1rem;
+  }
+}
+@media(max-width:600px){
+  /* .HomePage-Section p{
+    display: none;
+  } */
+}
+
+/*Navigation Bar*/
+.nav-Container{
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 3em;
+  height: 15vh;
+  background-color: #050504;
+  text-transform: uppercase;
+  
+  width: 100%;
+  
+}
+ .isHome{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  
+  padding: 0 3em;
+  height: 15vh;
+  background-color: #050504;
+  text-transform: uppercase;
+  width: 100%;
+  background-color: transparent;
+  position: absolute;
+}
+.nav-Logo{
+ z-index: 999;
+  font-size: 3rem;
+  font-weight: bold;
+  color: gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  
+}
+.nav-Logo h2{
+  color: gold;
+}
+.Hamburger-Menu{
+  display: none;
+}
+.Logo{
+  width: 3.5em;
+ 
+}
+.nav-Links{
+  display: flex;
+  gap: 6em;
+  justify-content: center;
+  align-items: center;
+  
+}
+.nav-Links a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.4em;
+  border-bottom: 4px solid transparent;
+}
+.nav-Links a.active{
+ color: rgba(255, 217, 0, 0.708);
+}
+.nav-Links a:hover{
+  border-color:gold;
+  transition: .2s ease-in-out;
+  border-radius: 15px;
+ 
+ 
+}
+
+.Hamburger-Logo{
+  position: relative;
+  z-index: 999;
+}
+.Hamburger-Button{
+  display: block;
+  position: relative;
+  width: 35px;
+  appearance: none;
+  background:none;
+  height: none;
+  outline: none;
+  border: none;
+  height: 35px;
+}
+.Hamburger-Button .bar ,.Hamburger-Button::after,.Hamburger-Button::before{
+  width: 100%;
+  height: 5px;
+  display: block;
+  content: '';
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.Hamburger-Button.Active::before{
+  transform: rotate(-45deg) translate(-8px,6px);
+}
+.Hamburger-Button.Active::after{
+  transform: rotate(45deg) translate(-9px,-8px);
+}
+.Hamburger-Button.Active .bar{
+  opacity: 0;
+}
+.Hamburger-Menu-Links{
+  text-align: start;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap:2em;
+  top:0;
+  right: 0;
+  width: 100%;
+  min-height: 100dvh;
+  z-index: 98;
+ background-color: black;
+  padding: 2em 1em;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+ font-weight: bold;
+
+ 
+  
+}
+.Hamburger-Menu-Links a{
+  color: gold;
+}
+.Hamburger-Menu-Links a.active{
+  color: rgb(183, 138, 23);
+}
+.Hamburger-Menu-Links.Hide{
+  visibility:hidden;
+}
+
+@media (max-width:1760px){
+  .nav-Logo{
+    font-size: 3rem;
+  }
+  .nav-Links a{
+    font-size: 1.2rem;
+    
+  }
+}
+@media (max-width:1550px){
+  .nav-Logo{
+    font-size: 2.5rem;
+  }
+  .nav-Links a{
+    font-size: 1rem;
+   
+  }
+  .nav-Links{
+    gap: 3em;
+  }
+}
+
+
+@media (max-width:1000px){
+  .nav-Logo{
+    font-size: 4rem;
+  }
+  .Logo{
+    width: 2.5em;
+    color: gold;
+    
+  }
+
+  .nav-Links{
+    display: none;
+  }
+  .isHome,.nav-Container{
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+   
+   
+    
+
+
+  }
+  
+  .Hamburger-Menu{
+    display: block;
+  
+  }
+  .nav-Logo{
+    margin-top: 0.1em;
+  }
+  .nav-Logo h2{
+    display: none;
+  }
+}
+/*Navigation Bar*/
+
+/*Gym Path Cards*/
+
+.PathCards-Container{
+   width: 70vw;
+  height: auto;
+  margin: 0 auto;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: visible;
+  margin-bottom: 3em;
+  gap: 10em;
+  
+}
+.Gain-Weight{
+  order: 1;
+}
+.Lose-Fat,.Gain-Weight{
+  margin-top: 5em;
+  cursor: pointer;
+  position: relative;
+}
+.Lose-Fat:hover, .Gain-Weight:hover{
+  transform: scale(1.025);
+  transition: 0.25s ease-in-out;
+
+}
+
+.Gain-Weight-Pic{
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  border: 8px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  
+}
+.Lose-Fat-Pic{
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  border: 8px solid rgb(0, 0, 0);
+  border-radius: 25px;
+
+}
+.Gain-Weight-Pic:hover,.Lose-Fat-Pic:hover{
+  border-color: 8px solid gold
+}
+.Fat-Loss-Content,.Gain-Weight-Content{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  
+
+}
+.card-content-title{
+  font-size: 5rem;
+  margin-bottom: 0.5em;
+}
+.card-content-body{
+  width: 80%;
+  font-size: 1.5rem;
+}
+.Fat-Loss-Content:hover,.Gain-Weight-Content:hover{
+  display: flex;
+  transition: 0.6s;
+  border: 8px solid gold;
+  border-radius: 25px;
+  opacity: 1;
+ 
+}
+@media(max-width:1750px){
+  .PathCards-Container{
+    width: 80%;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr;
+
+  }
+}
+@media(max-width:1350px){
+  .card-content-title{
+    font-size: 3rem;
+    text-align: center;
+  }
+  .card-content-body{
+    font-size: 1rem;
+  } 
+  .pathcards-outer h1{
+    font-size: 3.5rem;
+  }
+  .pathcards-outer h3{
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+  }
+}
+
+@media(max-width:1000px){
+  .pathcards-outer{
+    width: 75vw;
+    margin: 0 auto;
+    
+  }
+  .pathcards-outer h1{
+    font-size: 2.5rem;
+  }
+  .pathcards-outer h3{
+    font-size: 1rem;
+    margin-bottom: 1em;
+  }
+  .PathCards-Container{
+    width: 100%;
+    gap: 2em;
+    grid-template-columns: 1fr;
+
+  }
+  .Fat-Loss-Content,.Gain-Weight-Content{
+    opacity: 1;
+  }
+  .card-content-title{
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .card-content-body{
+    display: none;
+  } 
+}
+/*Gym Path Cards*/
+
+/*Calorie Form */
+form *{
+  color: black;
+}
+.Calorie-Calculator{
+  box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+  width: 45vw;
+  height: auto;
+  margin: 2em auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3em;
+  justify-content: center;
+  align-items: center;
+  background-color:#393838;
+  
+  
+  
+}
+.Calorie-Form-Title{
+  background-color: #2d2d2d;
+  padding: 0.5em;
+  width: 100%;
+  font-size: 2.5rem;
+  box-shadow: 1px 9px 5px -7px rgba(0,0,0,0.75);
+  color: gold;
+  text-align: center;
+}
+.Calorie-Calculator h3{
+  text-transform: uppercase;
+  padding: 0.5em 0;
+  color: black;
+  font-size: 1.7rem;
+}
+.Calorie-Calculator input[type="text"]{
+  width: 80%;
+  padding: 1em;
+  border-radius: 25px;
+  font-size: 1rem;
+  color:rgb(255, 255, 255) ;
+  font-weight: bold;
+  border: 2px solid #000000;
+  background-color: #707070;
+  
+}
+.Calorie-Calculator input:focus{
+  outline: none;
+  border-color: gold;
+}
+.Calorie-Calculator select{
+  margin-bottom: 3em;
+}
+.Calorie-Input-Fields{
+  margin-left: 4em;
+}
+.Height-Field,.Weight-Field{
+  position: relative;
+}
+.unit{
+  position: absolute;
+  color:white;
+  right: 8em;
+  top: 5em;
+  font-weight: bold;
+  opacity: 0.8;
+}
+.Calorie-Calculate-Button{
+  width: 80%;
+  color: black;
+  border-radius: 20px;
+  border: 2px solid #3d3d3d;
+  box-shadow: 0px 1px 5px 4px rgba(0,0,0,0.75);
+  font-size:2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.4em 0.0em;
+  cursor: pointer;
+  background-color: #707070;
+  
+  
+}
+.Calorie-Calculate-Button:hover{
+  transform: scale(1.01);
+  transition: 0.1s ease-in-out;
+  border-color: black
+
+}
+.Calorie-Calculator input[type="radio"]{
+  display: none;
+}
+.Calorie-Calculator .Gender-Label{
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.Calorie-Calculator .Gender-Label span{
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px 10px 0;
+  border-radius: 31px;
+  transition: .25s ease;
+}
+.Calorie-Calculator .Gender-Label span::before{
+  content: "";
+  
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: 0.25s ease;
+  box-shadow: inset 0 0 0 2px black;
+}
+.Calorie-Calculator input[type="radio"]:checked+span:before{
+  box-shadow: inset 0 0 0 10px gold;
+}
+.Activity-Label{
+ font-size: 1.7rem;
+ color: black;
+  margin-top: 1em;
+  width: 80%;
+  font-weight: bold;
+  display: flex;
+  margin-bottom: 0.4em;
+  
+}
+#Activity-Select{
+  width: 80%;
+  margin: 0;
+  padding: 0.4em 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color:#707070;
+  border: 2px solid #6c6c6c;
+  cursor: pointer;
+  color: white;
+}
+#Activity-Select:focus{
+  outline: none;
+  border-color: gold;
+}
+#Activity-Select option{
+  color: white;
+  
+}
+@media(max-width:1300px){
+
+.Calorie-Calculator{
+    width: 65vw;
+  }
+}
+@media(max-width:700px){
+  .Calorie-Calculator{
+    width: 100vw;
+    margin-top: 1em;
+  }
+  .unit{
+    right: 7em;
+  }
+  .Calorie-Calculate-Button{
+    font-size: 1.5rem;
+    border-color:rgb(13, 13, 13);
+    box-shadow: none;
+  }
+}
+/*Calorie Form */
+
+/*Search Bar for Exercises */
+.Search-Bar{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  background-color:#898989;
+  width: 35%;
+  color: black;
+  position: relative;
+  margin: 1em auto;
+  box-shadow: 2px 0px 5px 3px rgba(0,0,0,0.75);
+  border-radius: 25px;
+  
+}
+.Loading-Spinner-Small-Exercise{
+  display: block;
+  position: absolute;
+  top: 1;
+  right: 2%;
+}
+.Search-Bar input{
+  background-color:#898989;
+  outline: none;
+  border: none;
+  color: black;
+  width: 100%;
+  height: 100%;
+  font-size: 1.3rem;
+}
+.No-Exercises-Message-div{
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+.No-Exercises-Message h1{
+  font-size: 3rem;
+  text-align: center;
+  
+  
+}
+.Search-Bar input::placeholder{
+ color: black;   
+}
+.Search-Icon{
+width: 2em;
+}
+.Search-Bar-Button{
+  width: 30%;
+  height: 100%;
+  padding: 0.6em;
+  border: none;
+  background-color: #626262;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.Search-Bar-Button:hover{
+  color: gold;
+}
+.Search-Bar-Button:active{
+  transform: scale(0.95);
+  transition:0.05s ease-in-out;
+}
+
+/*Search Bar for Exercises */
+
+
+/* Category Exercises cards and Exercises Cards */
+
+.Category-Card-Container{
+  border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20vh;
+  background-color: #565656;
+  cursor: pointer;
+  
+}
+.Category-Card-Container:hover{
+  border: 5px solid rgb(186, 158, 2);
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}
+.Category-Card-Icon{
+  color: gold;
+}
+.Category-Card-Name{
+  margin-top: 10px;
+  text-transform:capitalize;
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.Categories-Cards-Container{
+  display: grid;
+  padding: 3em 5em;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(5,1fr);
+}
+.Category-Card-Link{
+  border: none;
+  
+}
+.Loading-Spinner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20vh;
+}
+.Loading-Spinner-Small{
+  display: block;
+  position: absolute;
+  top: 80%;
+}
+.BPExercisesCard-Container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+  justify-content: center;
+  align-content: center;
+  gap: 50px;
+  padding: 4em;
+}
+
+.BPExerciseCard-Container{
+  border: 1px solid black;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #686868;
+  padding: 1em 0.8em 4em 0.8em;
+  border-radius: 35px;
+  cursor: pointer;
+  box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.75);
+  border: 5px solid black;
+  
+
+}
+.BPExerciseCard-Container:hover{
+  border: 5px solid rgb(223, 190, 0);
+}
+.BPExerciseCard-Upper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.BPExerciseCard-Upper img{
+  border-radius: 35px;
+  margin: 0.6em 0;
+  border: 5px solid black;
+}
+.BPExerciseCard-Lower{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+
+}
+.card-Image{
+  width: 370px;
+  height: 370px;
+}
+.BPExerciseCard-Title{
+  
+  text-align: center;
+  color: black;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+.Specific-Exercise-Muscle, .Specific-Exercise-Equipment{
+  background-color: goldenrod;
+  color: black;
+  padding: 0.3em 0.6em;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+
+
+}
+
+.Specific-Exercise-Container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 5em 6em;
+ 
+
+}
+.Specific-Exercise-Lower{
+  display: flex;
+  justify-content: center;
+  align-items: self-start;
+  gap: 10em;
+  font-size: 1.6rem;
+  flex-direction: column;
+  margin-left: 1em;
+}
+.Specific-Exercise-Lower h3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  border-bottom: 2px dotted black;
+  padding-bottom: 2em;
+}
+.Specific-Exercise-Upper{
+  border-right: 5px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2em;
+}
+.Specific-Exercise-Upper img{
+  width: 70%;
+  border-radius: 25px;
+  border: 5px solid black;
+}
+.Specific-Exercise-Upper h2{
+  font-size: 3rem;
+  text-transform: capitalize;
+  
+
+}
+@media(max-width:1560px){
+  .Search-Bar{
+    width: 55%;
+  }
+  .Categories-Cards-Container{
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    padding: 1em 2.5em;
+  }
+  .Specific-Exercise-Lower{
+
+    gap: 4em;
+    margin: 2em 0;
+  }
+  .Specific-Exercise-Upper{
+    
+    padding: 0 1em 2em 1em;
+    
+  }
+  .Specific-Exercise-Upper img{
+    width: 80%;
+    
+  }
+  .Specific-Exercise-Upper h2{
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .Specific-Exercise-Lower h3{
+    font-size: 2rem;
+   
+    text-align: center;
+  }
+  
+}
+@media(max-width:780px){
+  .Search-Bar{
+    width: 80%;
+  }
+  .Search-Bar input,.Search-Bar-Button{
+    font-size: 1rem;
+    padding: 1em;
+  }
+  .Categories-Cards-Container{
+    grid-template-columns: 1fr;
+    padding: 1em 2.5em;
+  }
+  .BPExerciseCard-Container{
+    width: 90%;
+  margin: 0 auto;
+  }
+  .card-Image{
+    width: 100%;
+  }
+  .Specific-Exercise-Container{
+    grid-template-columns: 1fr;
+    margin: 2em;
+  }
+  .Specific-Exercise-Lower{
+
+    gap: 4em;
+    margin: 2em 0;
+  }
+  .Specific-Exercise-Upper{
+    border: none;
+    padding-bottom:3em;
+    border-bottom: 5px solid black;
+  }
+  .Specific-Exercise-Upper img{
+    width: 100%;
+  }
+  .Specific-Exercise-Upper h2{
+    font-size: 2.3rem;
+    text-align: center;
+  }
+  .Specific-Exercise-Lower h3{
+    font-size: 1.7rem;
+  }
+  .Loading-Spinner-Small-Exercise{
+    display: block;
+    position: absolute;
+    top: 110%;
+    right: 45%;
+  }
+  .No-Exercises-Message h1{
+    font-size: 2rem;
+  
+  }
+  .No-Exercises-Message-div{
+    gap: 1em;
+    text-align: center;
+  }
+}
+/* Category Exercises cards and Exercises Cards */
+
+
+/* Food Tracking */
+
+.Food-Tracking-Calories-Container{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 55vw;
+  margin: 1em auto;
+  padding: 1em;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  background-color: #353534;
+}
+.Food-Tracking-Calories{
+  margin-top: 0.5em;
+  display: flex;
+  gap: 3em;
+  font-size: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.Food-Tracking-Calories div{
+  display:flex;
+  flex-direction: column;
+  gap: 0.2em;
+  font-weight: bold;
+  font-size: 3rem;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+.Food-Tracking-Calories div span{
+  font-weight: normal;
+
+}
+.Food-Tracking-Calories div{
+  font-size:1.5rem;
+}
+.Food-Tracking-Calories h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+}
+.edit-Calories-Button{
+  background-color: #323232;
+  border: none;
+  cursor: pointer;
+  
+}
+.Food-Tracking-Meals-Container{
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid rgb(33, 33, 33);
+  font-size: 2rem;
+  gap: 2em;
+  padding: 2em 0;
+  
+}
+.Food-Tracking-Meals-Container .firstDivs{
+  padding: 1em;
+  box-shadow: 0px 7px 5px -3px rgba(0,0,0,0.75);
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+ 
+  
+}
+
+.Input-Error-Message{
+  position: absolute;
+  top: 37%;
+  right: 55%;
+  z-index: 1;
+ color: red;
+}
+
+.Nutrition-Button{
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid rgb(54, 54, 54);
+  background-color: #b4b4b4;
+  padding: 0.5em 2em;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 25px;
+  color: rgb(0, 0, 0)
+  
+}
+.Nutrition-Button:hover{
+  border-color: gold;
+  transition: 0.2s ease-in-out;
+}
+.Meals-Title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.Food-Tracking-Meals-Container .lastDiv{
+  box-shadow: none;
+  
+
+}
+.Add-Food-Button{
+  text-decoration: none;
+  color: gold;
+  font-size: 1.5rem;
+  background-color: #353534;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left;
+  
+}
+.Food-Search-Container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+}
+.Food-Search-Container form{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  justify-content: space-between;
+  gap: 1em;
+}
+.Food-Search-Container form input{
+  width: 55%;
+  padding: 1em;
+  color: white;
+  background-color: #6c6c6c;
+  border: none;
+  box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
+}
+.Food-Search-Container form input[type="number"]{
+  width: 30%;
+  color: white;
+  background-color: #6c6c6c;
+  
+ 
+}
+.Food-Search-Container form input::placeholder{
+  color: black;
+  
+}
+.Food-Search-Container form select{
+  border: none;
+  padding: 0.2em;
+  width: 10%;
+  background-color: #6c6c6c;
+  
+}
+.Food-Search-Submit{
+  padding: 1em 3em;
+  background-color: #494949;
+  color: rgb(255, 255, 255);
+  margin: 1em 0;
+  border: none;
+  cursor: pointer;
+  box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.75);
+}
+.Food-Search-Submit:hover{
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+
+}
+.Food-Search-Container h2{
+  font-size: 2rem;
+  color: goldenrod;
+  
+}
+.Food-Search-Result{
+  padding: 2em;
+  background-color:#585857
+}
+.FoodSearch-Item-Container{
+  margin: 1em;
+  padding: 1.5em;
+  align-items: center;
+  border-radius: 25px;
+  display: flex;
+ background-color: #353534;
+ justify-content: space-between;
+ 
+}
+.FoodSearch-Item-Inner{
+  display: flex;
+  gap: 0.5em;
+  font-size: 0.9rem;
+  opacity: 0.8;
+
+}
+.FoodSearch-Item-Container h3{
+  text-transform: capitalize;
+  margin-bottom: 0.2em;
+}
+.AddFoodItem-button{
+  border: none;
+  background-color:#252525;
+  font-size: 2rem;
+  border-radius: 50%;
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+  color: goldenrod;
+  
+}
+.SpecificFoodCals-Container{
+  display: flex;
+  gap: 1em;
+  font-size: 0.4rem;
+  justify-content: center;
+  align-items: center;
+}
+.SpecificFoodCals-Container h4{
+  font-size: 0.7rem;
+}
+.SpecificFoodCals-Container button{
+  background-color: #4a4a4a;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: black;
+
+  padding: 0.1em 0.4em;
+  border-radius: 50%;
+}
+.SpecificFoodCals-Container button:hover{
+  color: rgb(154, 8, 8);
+  background-color:#5d5c5c;
+}
+.AddFoodItem-button:hover{
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
+
+}
+.AddFoodItem-button:active{
+  background-color:goldenrod;
+  color: black;
+  
+}
+
+.noTextDecoration{
+  text-decoration: none;
+}
+.Added-Meals{
+  margin: 2em 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.Added-Meal-Container{ 
+  display: flex;
+  border-radius: 25px;
+  border: 2px solid rgb(70, 69, 69);
+  align-items: center;
+  padding: 1em;
+  justify-content: space-between;
+  width: 40vw;
+  gap: 1em;
+  font-size: 0.7rem;
+  background-color: #252525;
+}
+.Added-Meal-Container div{
+  font-size: 1.2rem;
+}
+
+.GoBack-Button{
+  width: 7vw;
+  color: black;
+  background-color:#323232;
+  border: none;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  padding: 0.2em 0.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2em;
+  font-size: 0.7;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.FoodResultDetails-Container{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 50vw;
+  margin: 1em auto;
+  padding: 1em;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  background-color: #353534;
+}
+
+.FoodResultDetails-Header,.FoodResultDetails-Header-All{
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2rem;
+  color: black;
+  padding-bottom: 1em;
+  border-bottom: 10px solid rgb(105, 105, 105)
+}
+.FoodResultDetails-Header-All{
+  border-bottom:10px solid goldenrod
+}
+.FoodResultDetails-Header-All h4{
+  font-size: 1.5rem;
+  color: rgb(201, 201, 201)
+}
+.FoodResultDetails-BelowHeader{
+  display: flex;
+  justify-content: space-between;
+}
+.FoodResultDetails-BelowHeader div{
+  border: 8px solid goldenrod;
+  padding: 0.5em 1em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.FoodResultDetails-Info-Specific{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(95, 95, 95);
+  padding: 1em;
+  
+}
+
+
+@media(max-width:2000px){
+  .Food-Tracking-Calories-Container{
+    width: 50%;
+    
+  }
+  .Added-Meal-Container{
+    width: 40vw;
+    margin-right: 1em;
+    
+  }
+  .Food-Tracking-Calories{
+    gap: 2em;
+    font-size:2.5rem;
+  }
+}
+@media(max-width:1650px){
+  .Food-Tracking-Calories-Container{
+    width: 70%;
+    
+  }
+  .Food-Tracking-Meals-Container{
+    font-size: 1.5rem;
+  }
+  .Add-Food-Button{
+    font-size: 1.2rem;
+  }
+  .FoodResultDetails-Container{
+    width: 70vw;
+  }
+ 
+}
+@media(max-width:1040px){
+  .Food-Tracking-Calories{
+    gap: 1em;
+    font-size:2rem;
+  }
+  .Food-Tracking-Calories div{
+    font-size: 1.5rem;
+  }
+}
+
+@media(max-width:700px){
+  .Food-Tracking-Calories-Container{
+    width: 100%;
+  }
+  .Food-Tracking-Meals-Container{
+    font-size: 1rem;
+  }
+  .Add-Food-Button{
+    font-size: 1rem;
+  }
+  .Food-Tracking-Calories{
+    gap: 2em;
+    font-size: 1.5rem;
+  }
+  .Food-Tracking-Calories div{
+    font-size: 1rem;
+  }
+  .Food-Search-Container form{
+    width: 100%;
+  }
+  .Added-Meal-Container{
+    width: 75vw;
+    margin-right: 1em;
+    
+  }
+  .Added-Meal-Container div{
+    font-size: 1rem;
+  }
+  .Added-Meals{
+    gap: 0.5em;
+  }
+  .SpecificFoodCals-Container h4{
+    font-size: 1rem;
+  }
+  .Food-Search-Result{
+    padding: 2em 0.5em;
+  }
+  .GoBack-Button{
+    width: 20vw;
+  }
+  .Food-Search-Submit{
+    margin-bottom: 2em;
+  }
+  .FoodResultDetails-Container{
+    width: 100vw;
+  }
+  
+}
+@media(max-width:470px){
+  .Food-Tracking-Calories{
+    gap: 1em;
+    font-size: 1.5rem;
+  }
+}
+
+/* Food Tracking */
+
+
+
+/* Workout Plan */
+
+
+.WorkoutPlan-Container{
+  box-shadow: 0px 7px 16px 0px rgba(0,0,0,0.75);
+  margin: 1em auto;
+  width: 55vw;
+  height: auto;
+  display: grid;
+  background-color: rgb(86, 86, 86);
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(auto-fit,minmax(100px,1fr))
+  
+}
+
+.WorkoutPlan-Calories{
+  height: 4em;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 18px -5px rgba(0,0,0,0.75);
+  background-color: rgb(34, 34, 34);
+  padding: 3em 1em;
+  margin-top: 1em;
+  text-align: center;
+  border-radius: 25px;
+ 
+  
+}
+.WorkoutPlan-Calories h3{
+  color: goldenrod;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+
+}
+.WorkoutPlan-Calories div{
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.WorkoutPlan-Goal{
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.WorkoutPlan-Days{
+  grid-column: 1/4;
+  grid-row:2;
+  
+}
+.WorkoutPlan-Day-Container{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border-radius: 25px;
+  padding: 2em;
+  margin: 5em 2em;
+  justify-content: center;
+  align-self: center;
+  background-color: #222222;
+
+}
+.WorkoutPlan-Day-Container h4{
+  color: gold;
+  text-decoration: none;
+}
+
+.WorkoutPlan-Day-Title{
+  display: flex;
+  justify-content: center;
+}
+.WorkoutPlan-Exercise-Container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+
+}
+.WorkoutPlan-TargetMuscle{
+  background-color: rgb(171, 30, 23);
+  padding: 0.4em;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 25px;
+  text-align: center;
+  color: black;
+}
+.WorkoutPlan-ExerciseName{
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+.WorkoutPlan-ExerciseName:hover{
+  color: goldenrod;
+  cursor: pointer;
+}
+.REST-DAY{
+  display: flex;;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3em;
+  margin: 2em;
+  background-color: #222222;
+  border-radius: 25px;
+  gap: 2em;
+}
+.REST-DAY h4{
+  font-size: 3rem;
+  color: goldenrod;
+
+}
+@media(max-width:2000px){
+  .WorkoutPlan-Container{
+    width: 50vw;
+  }
+}
+@media(max-width:1600px){
+  .WorkoutPlan-Container{
+    width: 70vw;
+  }
+  .WorkoutPlan-Calories{
+    padding: 3.5em 5em;
+
+  }
+}
+@media(max-width:700px){
+  .WorkoutPlan-Container{
+    width: 100vw;
+  }
+  .WorkoutPlan-Calories h3{
+    font-size: 1.2rem;
+  }
+}
+
+/* Workout Plan */
+
+/* User Verification */
+
+.User-Verification-Container{
+  background: black;
+  width: 30vw;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 5em;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 1px 31px -11px gold;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 25px;
+}
+.User-Verification-Container input{
+  border: none;
+  width: 80%;
+  padding: 1.5em 0;
+  font-size: 1.2rem;
+  background-color: black;
+  border-bottom: 2px solid gold;
+  opacity: 0.8;
+  border-radius: 2px;
+}
+.User-Verification-Container input::placeholder{
+  color: white;
+}
+
+.User-Verification-Container input:focus{
+  outline: none;
+  opacity: 1;
+}
+.User-Verification-Title{
+  padding-top: 1em;
+  font-size: 2rem;
+  padding-bottom: 1.5em;
+}
+
+.SignIn-Button{
+  margin-top: 2em;
+  font-size: 1.4rem;
+  border: 2px solid gold;
+  width: 30%;
+  text-align: center;
+  background-color: black;
+  padding: 0.4em 1em;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.SignIn-Button:hover{
+  transform: scale(1.03);
+  transition: 0.1s ease-in-out;
+}
+.User-Verification-Container h5{
+  text-decoration: underline;
+  color: gold;
+  padding:2em 0;
+  text-align: center;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+.SignIn-Google{
+  color: white;
+  background-color: black;
+  border: none;
+  width: 50%;
+  cursor: pointer;
+  margin-top: 1em;
+  padding-bottom: 0.5em;
+  
+
+}
+
+@media(max-width:1400px){
+  .User-Verification-Container{
+    width: 55vw;
+  }
+}
+@media(max-width:600px){
+  .User-Verification-Container{
+    width: 80vw;
+  }
+  .SignIn-Button{
+    font-size: 1.2rem;
+  }
+}
+
+/* User Verification */
